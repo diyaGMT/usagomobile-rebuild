@@ -16,8 +16,8 @@ const FRANCHISES_COLUMNS =
   "id,company_name,address,city,state,zipcode,service_phone,website,latitude,longitude,location_slug";
 
 export async function getActiveFranchises(): Promise<Franchise[]> {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const url = process.env.SUPABASE_URL;
+  const anonKey = process.env.SUPABASE_ANON_KEY;
 
   if (!url || !anonKey) return [];
 
